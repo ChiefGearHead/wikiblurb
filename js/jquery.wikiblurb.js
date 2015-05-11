@@ -22,7 +22,8 @@
 	    type: 'all',
 	    customSelector: '',
             filterSelector: '', 
-            callback: function(){ }
+            callback: function(){ },
+            errorcallback: function(){ }
         }, options);
         
 	/******************************
@@ -148,6 +149,7 @@
 	    
 	    showError: function(){
 		object.html('<div class="nbs-wikiblurb-error">There was an error locating your wiki data</div>');
+		settings.errorcallback();
 	    }
 
         };
